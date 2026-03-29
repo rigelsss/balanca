@@ -1,0 +1,389 @@
+:root {
+  font-family: "Segoe UI", sans-serif;
+  color: #f4efe6;
+  background:
+    radial-gradient(circle at top left, rgba(226, 145, 84, 0.25), transparent 30%),
+    linear-gradient(135deg, #1d2027 0%, #111318 45%, #0b0d11 100%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d46f37, #df9b43);
+  color: #15171c;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 0.4rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 8, 10, 0.4);
+  color: #f7f3ea;
+  padding: 0.9rem 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.auth-shell,
+.app-shell {
+  min-height: 100vh;
+}
+
+.auth-shell {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.auth-card,
+.page-card,
+.sidebar {
+  backdrop-filter: blur(20px);
+  background: rgba(20, 22, 28, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.auth-card {
+  width: min(440px, 100%);
+  border-radius: 28px;
+  padding: 2rem;
+}
+
+.auth-form,
+.page-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.register-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 1rem;
+}
+
+.register-main,
+.register-sidebar {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.register-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.status-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.status-pill {
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.status-label {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(244, 239, 230, 0.62);
+  margin-bottom: 0.4rem;
+}
+
+.status-subline {
+  margin-top: 0.35rem;
+  color: rgba(244, 239, 230, 0.72);
+  font-size: 0.92rem;
+}
+
+.register-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.inline-section {
+  border-radius: 22px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.batch-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.batch-notes {
+  grid-column: 1 / -1;
+}
+
+.inline-choice {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.toggle-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.toggle-chip {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4efe6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.toggle-chip.active {
+  background: rgba(212, 111, 55, 0.22);
+  color: #fff4e7;
+}
+
+.form-footnote {
+  font-size: 0.95rem;
+  color: rgba(244, 239, 230, 0.68);
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.history-meta {
+  color: rgba(244, 239, 230, 0.72);
+}
+
+.history-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.history-card {
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.history-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.history-badge {
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  background: rgba(212, 111, 55, 0.22);
+  color: #fff4e7;
+  font-size: 0.9rem;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.batch-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.catalog-create,
+.catalog-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) 120px 140px 140px 120px;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.catalog-table {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.catalog-head {
+  color: rgba(244, 239, 230, 0.68);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-row input {
+  width: auto;
+  margin-top: 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: #f2b77d;
+}
+
+.muted {
+  color: rgba(244, 239, 230, 0.68);
+}
+
+.field-error,
+.form-error {
+  color: #ff9e8d;
+  font-size: 0.9rem;
+}
+
+.form-success {
+  color: #b3f0b8;
+  font-size: 0.95rem;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  background: rgba(72, 180, 97, 0.14);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.sidebar {
+  border-radius: 28px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 2.5rem);
+}
+
+.nav-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.nav-link {
+  color: rgba(244, 239, 230, 0.82);
+  text-decoration: none;
+  border-radius: 18px;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-link.active {
+  background: rgba(212, 111, 55, 0.22);
+  color: #fff4e7;
+}
+
+.sidebar-footer {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.user-chip {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 0.45rem 0.8rem;
+}
+
+.content {
+  padding: 0.5rem 0;
+}
+
+.page-card {
+  border-radius: 28px;
+  padding: 1.75rem;
+}
+
+.hero-card {
+  min-height: 240px;
+}
+
+.plain-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    min-height: auto;
+  }
+
+  .register-layout,
+  .status-strip,
+  .two-columns,
+  .batch-form-grid,
+  .history-grid,
+  .catalog-create,
+  .catalog-row,
+  .batch-admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .register-header {
+    flex-direction: column;
+  }
+
+  .history-card-head {
+    flex-direction: column;
+  }
+}
