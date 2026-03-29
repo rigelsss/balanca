@@ -32,4 +32,12 @@ public class ApiExceptionHandler {
                 "message", "Credenciais invalidas"
         ));
     }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Map<String, Object>> handleIllegalArgument(IllegalArgumentException exception) {
+        return ResponseEntity.badRequest().body(Map.of(
+                "timestamp", Instant.now().toString(),
+                "message", exception.getMessage()
+        ));
+    }
 }
